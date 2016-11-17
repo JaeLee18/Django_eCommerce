@@ -1,0 +1,14 @@
+{% extends "base_for_account.html" %}
+{% block title %}주문 페이지{% endblock %}
+{% block content %}
+<h1>!!!주문 페이지</h1>
+
+<div id="testing">
+	<form action="." method="post">
+		{{ shipping_form.as_p }}
+		{% csrf_token %}
+		<p><input type="submit" value="완료!"></p>
+	</form>
+</div>
+
+{% endblock %}

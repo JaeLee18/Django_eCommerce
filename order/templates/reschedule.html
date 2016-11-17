@@ -1,0 +1,13 @@
+{% extends "base_for_account.html" %}
+{% block title %}배송 수정{% endblock %}
+{% block content %}
+ <h1>배송 수정</h1>
+<div class="login-form">
+		<form action="{% url 'changeDuration' %}" method="post">
+			{{ form.as_p }}
+			{% csrf_token %}
+		<p><input type="submit" value="수정"></p>
+		</form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base_for_account.html" %}
+{% block title %}비회원 주문상품 정보 페이지{% endblock %}
+{% block content %}
+<h1>비회원 주문상 조회 출력 페이지</h1>
+<div id="testing">
+	<h2> Following is your history: </h2>
+		Time: {{order}}</br>
+		배송: {{order.delivered}}/{{order.toBdelivered}} </br>
+		Total is {{order.price}}</br>
+		{% for t in tracking%}
+			<li>배송 예정: {{t.date}}
+			<form action="#" method="get">
+				<input type="text" value="ex)2016-01-01" name="dateData" />
+				<input type="submit" value="개별식단변경" name="a">
+				<input type="hidden" value="{{t.id}}" name="change">
+			</form>
+			</li>
+		{%endfor%}
+
+	<p>
+		<a href = "{%url "changeDuration" %}">전체식단 수정하기</a>
+	</p>
+
+</div>
+
+{% endblock %}

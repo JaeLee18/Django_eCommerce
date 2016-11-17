@@ -1,0 +1,14 @@
+{% extends "base_for_account.html" %}
+{% block title %}배송 수정 완료{% endblock %}
+{% block content %}
+ <h1>배송 수정 완료</h1>
+<div class="completed">
+Time: {{order}}</br>
+		Total is {{order.price}}</br>
+		{% for t in tracking%}
+			<li>배송 예정: {{t.date}}</li>
+		{%endfor%}
+		<a href="{%url "dashboard" %}">첫 페이지로 돌아가기</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base_for_account.html" %}
+{% block title %}로그인 페이지{% endblock %}
+{% block content %}
+ <h1>주문 페이지, 회원 or 비회원</h1>
+ {% if form.errors %}
+ 	<p>아이디와 비밀번호가 맞지않습니다.</p>
+ {% else %}
+ 	<p></p>
+ {% endif %}
+	<div class="login-form">
+			<form action="{% url 'login' %}" method="post">
+				{{ form.as_p }}
+				{% csrf_token %}
+				<input type="hidden" name="next" value="{{ next }}" />
+				<p><input type="submit" value="order">
+					<a href="{%url "orderPage" %}"></a></p>
+				<p><a href="{% url "password_reset" %}">Forgotten your password?</a></p>
+				<p><a href="{%url "orderPageGuest" %}">
+				Guest</a></p>
+			</form>
+	</div>
+
+{% endblock %}
