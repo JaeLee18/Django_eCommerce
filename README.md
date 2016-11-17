@@ -1,4 +1,4 @@
-# e-Commerce
+# e-Commerce codes
 - Django
 - PostgreSQL
 - Javascript
