@@ -1,5 +1,7 @@
-# eCommerce
-e -commerce sources 
+# e-Commerce
+- Django
+- PostgreSQL
+- Javascript
 
 ##member
 It contains all about how to make a registration for customers.
